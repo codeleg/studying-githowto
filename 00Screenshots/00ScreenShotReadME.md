@@ -1,5 +1,6 @@
 
-1. Screenshot: Configuring Git
+1. Screenshot: 
+Configuring Git
 The first step is to set up your name and email address in Git. We selected the main branch and wrote a command to fix line breaks (for Windows users).
     1. git config --global user.name "Your Name"
 This sets your Git username globally.
@@ -7,12 +8,14 @@ This sets your Git username globally.
 This sets your Git email globally.
     3. git config --global init.defaultBranch main
 This sets the default branch to "main" when you initialize a new repository.
-For Windows users: 4. git config --global core.autocrlf true
+For Windows users:
+    4.git config --global core.autocrlf true
 This adjusts line endings to ensure compatibility between Windows and Unix-based systems.
     5. git config --global core.safecrlf warn
 This gives a warning if files are checked out or committed with inconsistent line endings.
 
-2. Screenshot: Creating a Local Repository and Connecting to a Remote Repository
+2. Screenshot :
+ Creating a Local Repository and Connecting to a Remote Repository
 This step shows how to create a local repository using Git and connect it to a remote repository.
     1. mkdir studying-git
 This command creates a new directory named "studying-git." This directory will be used as the local Git repository.
@@ -28,7 +31,8 @@ This command pulls the latest changes from the "main" branch of the remote repos
 This command stages files for the next commit, preparing the changes to be committed.
 These steps are required to initialize a Git project and connect it to a remote repository.
 
-3. Screenshot: Creating a Repository and Adding Files
+3. Screenshot : 
+Creating a Repository and Adding Files
 Here, we show how to create a Git repository from a directory that contains one file and add that file to the repository.
     1. git add hello.html
 This command adds the hello.html file to Git's staging area. This means that changes made to the file are being prepared for a future commit.
@@ -40,7 +44,8 @@ This commits the changes to the hello.html file, including a message ("Updated h
 This command shows the current status of the Git repository. The output On branch main and nothing to commit, working tree clean indicates that there are no pending changes, and all changes have been committed.
 At this point, the file has been added and the updates have been committed.
 
-4. Screenshot: Committing Additional Changes
+4. Screenshot : 
+Committing Additional Changes
 In this step, Git commands are used to manage and commit additional files:
     1. git commit -m "Update hello.html with new header"
 This command commits the changes made to hello.html, with a message saying that the header was updated.
@@ -60,7 +65,8 @@ Finally, c.html is added to the staging area.
 File Structure:
 On the left side, the file structure is shown under the path D:\MASAÜSTÜ\githowto\repositories\work\, which contains files hello.html, a.html, b.html, and c.html.
 
-5. Screenshot: Status Check
+5. Screenshot:
+ Status Check
     1.Status Check After making changes, the current status was checked:
         ◦ git status
 This command shows which files have been modified and which ones are ready to be committed. The output indicates that the hello.html file has been modified.
@@ -71,25 +77,26 @@ This command commits the changes to the hello.html file. The -m parameter allows
         ◦ git status
 This command confirms that the current working directory is clean and all changes have been committed. The "working tree clean" message indicates that all modifications have been recorded.
 
-6. Screenshot: Viewing the Project's History
+6. Screenshot: 
+Viewing the Project's History
 The git log command allows you to get a list of changes made in the repository.
     • git log
-You have full control over what the log displays. The single-line format is a favorite of many users:
-Screenshot 6: git log --oneline
+I have full control over what the log displays. The single-line format is a favorite of many users:
+    •git log --oneline
 In this section, the commit history of the Git repository is summarized. The git log --oneline command shows each commit in a single line, providing a brief summary of commit messages.
-    1. 780380e (HEAD -> main): Added HTML header
+    ->. 780380e (HEAD -> main): Added HTML header
         ◦ This commit involves adding a header to the HTML file. The HEAD label indicates the commit you're currently working on.
-    2. d52c5f: Added standard HTML page tags
+    ->. d52c5f: Added standard HTML page tags
         ◦ This commit adds standard HTML page tags.
-    3. 085e211: Unrelated change to c
+    ->. 085e211: Unrelated change to c
         ◦ This commit documents an unrelated change made to the c file.
-    4. 95784d: Changes for a and b
+    ->. 95784d: Changes for a and b
         ◦ This commit involves changes made to the a and b files.
-    5. 96395fd: Update hello.html with new header
+    ->. 96395fd: Update hello.html with new header
         ◦ This commit adds a new header to the hello.html file.
-    6. 1b6e069: Updated hello.html
+    ->. 1b6e069: Updated hello.html
         ◦ This commit signifies general updates made to the hello.html file.
-    7. b385ee6: Initial commit
+    ->.  b385ee6: Initial commit
         ◦ This is the initial commit for the repository, representing the project's starting point.
 
     1. Customizing Git Log Format
@@ -136,23 +143,6 @@ This command switches to the main branch. The message "Already on 'main'" indica
     7. This command tries again to restore the b.html file, but the operation fails due to the same error message from the previous step.
               7. git checkout 95d7844
     8. This command checks out the 95d7844 commit. It returns the repository to the state it was in at that specific commit.
-
-
-7. Screenshot:
-    1.git log
-This command displays the commit history of the Git repository. For each commit, the following information is shown:
-        ◦ 780380e: The short commit hash.
-        ◦ 2024-09-18: The commit date.
-        ◦ Added HTML header: The commit message.
-        ◦ (HEAD -> main): This indicates that you're currently on the main branch. Other commits are listed similarly.
-    2. git checkout 5836970 -- Hello.html
-This command attempts to restore the Hello.html file from the commit with the hash 5836970. However, the error message "fatal: invalid reference: 5836970" indicates that the specified commit hash is not valid.
-    3. git checkout 95d784 -- hello.html
-This command tries to restore the hello.html file from the commit with the hash 95d784. If successful, the content of the hello.html file will be updated to match its state at that commit.
-    4. cat hello.html
-This command displays the content of the hello.html file in the terminal. The output shows the file's content as <h1>Hello, World!</h1>.
-    5. git switch main
-This command switches to the main branch. The message "Already on 'main'" indicates that you are already on the main branch. Additionally, the output shows M hello.html, indicating that the hello.html file has been modified.
 
 8. Screenshot:
     1.git checkout v1
@@ -240,7 +230,7 @@ This command displays the commit history for the current branch (in this case, t
         ◦ b385ee6 (2024-09-17): "Initial commit" – This is the initial commit of the project, marking its beginning.
 These steps demonstrate how to view the commit history in Git and understand what changes each commit contains. The commit messages are important for explaining the changes made in each commit.
 
-13. Screenshot:
+13. Screenshot :
 This screenshot shows how a tag named "oops" was created using the command:
     • git tag oops: This command creates a tag called oops. Tags are generally used to mark specific commits or indicate version numbers.
     1. git reset --hard v1: This command resets the current working directory (HEAD) to the state of the commit tagged v1. The --hard parameter ensures that changes in the working directory are overwritten.
@@ -256,7 +246,7 @@ These steps demonstrate how the state of the repository was restored by rolling 
     • git log --all: This command shows the commit history for all branches and tags, displaying a full log list.
 You can see that the opps tag has been deleted in this log
 
-15. Screenshot:
+15. Screenshot :
     1.File Status:
         ◦ The hello.html file has been modified and is marked with an "M" (Modified) status, indicating that changes have been made.
     2.HTML Content:
@@ -273,7 +263,8 @@ You can see that the opps tag has been deleted in this log
     7.Latest Commit Status:
         ◦ Finally, the git log command shows the updated commit history, where the latest commit message has been updated to "Added copyright statement with email," reflecting the new changes from the amended commit.
 
-16. Screenshot : The steps for creating a new branch, managing files, and committing changes in Git are outlined as follows:
+16. Screenshot : 
+The steps for creating a new branch, managing files, and committing changes in Git are outlined as follows:
 Creating a New Branch and Checking Status:
     • $ git switch -c style: This command creates a new branch called style and switches to it. The -c option is shorthand for creating a new branch.
     • $ git status: After switching branches, this command checks the current status of the repository. The message "working tree clean" indicates that there are no uncommitted changes in the working directory at this point.
@@ -321,25 +312,25 @@ Updating the HTML File:
 These steps demonstrate how to rename files, move them into new directories, and maintain clear commit messages that describe the changes in a Git repository.
 
 19. Screenshot :
-1. Viewing Commit History:
+1.Viewing Commit History:
     • $ git log hello.html: The commit history for the hello.html file is displayed. The recent commits show the changes made to the file.
-2. Viewing the Style File's History:
+2.Viewing the Style File's History:
     • $ git log style.css: The commit history for the style.css file has been checked.
-3. Viewing Last Commit Details:
+3.Viewing Last Commit Details:
     • $ git show v1: The details of the last commit associated with the v1 tag are displayed. This includes changes made to hello.html.
-4. Viewing File Differences:
+4.Viewing File Differences:
     • Changes in hello.html are shown, including the addition of a new <head> tag.
-5. Renaming the File:
+5.Renaming the File:
     • $ mv hello.html index.html: The hello.html file has been renamed to index.html.
 
 20. Screenshot :
-1. Switching Branches:
+1.Switching Branches:
     • $ git switch main: Switched to the main branch, which is the primary development branch.
-2. Adding a README File:
+2.Adding a README File:
     • $ git add README.md: An attempt was made to add the README.md file. However, the error "pathspec 'README' did not match any files" indicates that the file does not exist.
-3. Viewing the README File:
+3.Viewing the README File:
     • $ git add README.md: The content of the README.md file has been checked. The file contains the text: "This is the Hello World example from the GitHowTo tutorial."
-4. Commit Operation:
+4.Commit Operation:
     • $ git commit -m "Added README": A commit was made for the README file with the message "Added README." As a result, one file was changed and one addition was made.
 Screenshot 21:
 Viewing Commit History:
@@ -350,20 +341,20 @@ Viewing Commit History:
     • $ git log --all --graph: The commit history across all branches is displayed graphically. This allows for visual tracking of the project's development process and the changes made.
 
 22. Screenshot :
-1. Switching Branches:
+1.Switching Branches:
     • $ git switch style: Switched to the style branch, where changes related to styles are made.
-2. Merging with the Main Branch:
+2.Merging with the Main Branch:
     • $ git merge main: Merged the main branch into the style branch. This operation brings changes from the main branch into the style branch.
-3. Merge Operation:
+3.Merge Operation:
     • The message "Merge made by the 'ort' strategy." indicates that the merge was performed using the 'ort' strategy, which is an automatic merging method.
-4. Creation of the README File:
+4.Creation of the README File:
     • The README.md file was created, and one line was added. This file will contain the project's descriptions and information.
-5. Viewing Commit History:
+5.Viewing Commit History:
     • $ git log --all --graph: The commit history across all branches is displayed graphically.
     • bae7219 (2024-09-19): The main branch was merged into the style branch.
 
 23. Screenshot :
-1. HTML File Content:
+1.HTML File Content:
     • The hello.html file has a basic HTML structure. Its content is as follows:
     • 
       <!-- Author: Alexander Shvets (alex@githowto.com) -->  
@@ -377,17 +368,17 @@ Viewing Commit History:
           <p>Let's learn Git together.</p>  
         </body>  
       </html>  
-2. Switching Branches:
+2.Switching Branches:
     • $ git switch main: Switched to the main branch, which is the primary development branch.
-3. Adding the File and Commit Operation:
+3.Adding the File and Commit Operation:
     • $ git add hello.html
     • $ git commit -m "Added meta charset": The hello.html file was added, and it was committed with the message "Added meta charset." This resulted in one file being changed, with five additions and two deletions.
-4. Viewing Commit History:
+4.Viewing Commit History:
     • $ git log --all --graph: The commit history across all branches is displayed graphically. This allows for visual tracking of the project's development process and the changes made.
-5. Last Commit Details:
+5.Last Commit Details:
     • bae7719 (2024-09-19): The main branch was merged into the style branch.
 
-24. Screenshot
+24. Screenshot:
 Branch Switching
     • $ git switch style
 ◦ Switched to the style branch, defined as the branch where style-related changes are made.
@@ -413,8 +404,8 @@ Last Commit Details
     • ◦ 8bd270e (HEAD -> style): Resolved conflict in hello.html.
     • ◦ dea0c4f (main): Added meta charset.
 
-25. Screenshot
-Adding Remote Repository
+25. Screenshot :
+◦Adding Remote Repository
     • $ git remote add origin https://github.com/codeleg/studying-githowto.git
 ◦ A remote repository named origin has been added. This specifies the remote extension of the local repository on GitHub.
 Pushing Changes
@@ -430,7 +421,7 @@ Viewing Remote Repository Information
     • $ git remote -v
 ◦ The information of the remote repository has been displayed. The URL of the repository added under the name origin is shown.
 
-26. Screenshot
+26. Screenshot :
 Viewing Commit History
     • $ git log --graph
 ◦ The commit history was displayed graphically. This allows for visual tracking of the project's development process and changes made.
@@ -450,7 +441,7 @@ Checking Current State of HEAD
 Last Commit Status
     • ◦ 4c91b74 (HEAD -> style): CSS style file added.
 
-27. Screenshot
+27. Screenshot :
 Checking Branch Status
     • $ git log --all --graph
 ◦ Checked that you are on the style branch and that the commit history was displayed graphically. This allows for visual tracking of the project's development process and changes made.
@@ -474,7 +465,7 @@ Retrying Push
     • $ git push origin style
 ◦ After resolving the conflict, an attempt was made to push the style branch to the remote repository. The "Everything up-to-date" message indicates that the local branch is synchronized with the remote branch.
 
-28. Screenshot
+28. Screenshot :
 Conflict Situation
     • ◦ It was indicated that there is a conflict in the index.html file. The conflict is attempted to be resolved with the command git add index.html.
     • ◦ Before resolving the conflict, the command git commit -m "Resolve merge conflict in index.html" was used to commit the conflict resolution.
@@ -505,7 +496,7 @@ Change Directory: The command cd . is used to change the current directory to 
     4. List Directory Contents Again: The command ls is used again to list the contents of the current directory, which now includes the newly created home directory.
 the steps involve navigating to a directory, checking its contents, and cloning a repository from one directory to another. 
 
-31. ScreenShot
+31. ScreenShot :
 Change Directory:
         ◦ Command: cd home
         ◦ This command changes the current working directory to the home directory.
@@ -531,15 +522,15 @@ Key Points from the Git Log Output:
     • Commit Hashes: Each commit has a unique identifier (hash) that can be used to reference specific changes.
 Overall, this session involves navigating to a directory, listing its contents, and reviewing the commit history of a Git repository.
 
-32. ScreenShot
-1. Change Directory
+32. ScreenShot :
+1.Change Directory
     • Command: cd home
     • Explanation: This command changes the current working directory to the home directory within the specified path.
-2. List Remote Repositories
+2.List Remote Repositories
     • Command: git remote
     • Explanation: This command lists the remote repositories associated with the local Git repository. The output shows:
         ◦ origin: This is the default name for the remote repository.
-3. Show Remote Repository Details
+3.Show Remote Repository Details
     • Command: git remote show origin
     • Explanation: This command provides detailed information about the remote repository named origin. The output includes:
         ◦ Fetch URL: D:/MASAÜSTÜ/githowto/repositories/work - This is the URL from which the repository can be fetched.
@@ -551,8 +542,9 @@ Overall, this session involves navigating to a directory, listing its contents, 
             ▪ style: tracked
         ◦ Local branch configured for 'git pull': Indicates that the local main branch is set to merge with the remote main branch.
         ◦ Local ref configured for 'git push': Indicates that local changes will be pushed to the main branch of the remote repository, and it is up to date.
-33. ScreenShot 
-git branch
+
+33. ScreenShot :
+    •git branch
 Description: This command lists the branches in the current Git repository.
 Output:
     • * main: This indicates that you are currently on the main branch. The asterisk signifies the active branch.
@@ -564,44 +556,45 @@ Output:
     • remotes/origin/backup-main: Another branch located in the remote repository.
     • remotes/origin/main: The main branch in the remote repository.
     • remotes/origin/style: Another branch present in the remote repository.
-34. ScreenShot
-1. Change Directory
+
+34. ScreenShot :
+1.Change Directory
     • Command: cd ..
     • Explanation: This command moves up one directory level to the parent directory.
-2. Change to Work Directory
+2.Change to Work Directory
     • Command: cd work
     • Explanation: This command changes the current working directory to the work directory.
-3. Add README File
+3.Add README File
     • Command: git add README
     • Explanation: This command stages the README file for the next commit. However, the output indicates that the file path specified did not match any files.
-4. Commit Changes
+4.Commit Changes
     • Command: git commit -m "Changed README in original repo"
     • Explanation: This command attempts to commit the staged changes with a message. The output indicates:
         ◦ On branch main: You are currently on the main branch.
         ◦ Changes not staged for commit: The system informs you that there are changes in the working directory that have not been staged.
         ◦ Modified: The README.md file has been modified but not staged.
-5. Add README.md File Again
+5.Add README.md File Again
     • Command: git add README.md
     • Explanation: This command stages the README.md file for the next commit.
-6. Commit Changes Again
+6.Commit Changes Again
     • Command: git commit -m "Changed README in original repo"
     • Explanation: This command commits the changes with the specified message. The output indicates:
         ◦ 1 file changed: The README.md file was modified.
         ◦ 2 insertions(+): Two lines were added to the file.
         ◦ 2 deletions(-): Two lines were removed from the file.
-35. ScreenShot
-Fetch Updates:
+35. ScreenShot :
+    1.Fetch Updates:
         ◦ Command: git fetch
         ◦ This command retrieves updates from the remote repository without merging them into the local branch.
-    2. View Commit History:
+    2.View Commit History:
         ◦ Command: git log --all --graph
         ◦ This command displays the commit history in a graphical format, showing all branches and their relationships.
-    3. Key Outputs:
+    3.Key Outputs:
         ◦ The log shows various commits, including changes to the README.md file and merges from different branches.
         ◦ It indicates the most recent changes and conflicts resolved during the development process.
 
-36. ScreenShot
-View README File:
+36. ScreenShot : 
+    1.View README File:
         ◦ Command: cat README.md
         ◦ This command displays the contents of the README.md file, which includes a brief description of the project.
     2. Merge Changes:
@@ -614,7 +607,7 @@ View README File:
         ◦ Command: git pull
         ◦ This command checks for any new changes from the remote repository. The output indicates that the local branch is already up to date, meaning there are no new changes to pull.
 
-37. ScreenShot 
+37. ScreenShot :  
 Track a New Branch:
         ◦ Command: git branch --track style origin/style
         ◦ Explanation: This command creates a new local branch named style that tracks the remote branch origin/style. The output confirms that the branch has been set up to track the remote branch.
@@ -636,7 +629,7 @@ Track a New Branch:
 Summary
 This session demonstrates creating a new branch that tracks a remote branch, listing local and remote branches, and reviewing the recent commit history. It highlights the process of managing branches and tracking changes in a Git repository.
  
-38. ScreenShot
+38. ScreenShot : 
 View Recent Commits:
         ◦ Command: git log --max-count=2
         ◦ Explanation: This command displays the last two commits in the repository. The output shows:
@@ -655,61 +648,61 @@ View Recent Commits:
 Summary
 This session demonstrates viewing recent commits, changing directories, cloning a bare repository, and listing its contents. It highlights the process of managing repositories and understanding their structure in Git.
 
-39. ScreenShot
-cd work
+39. ScreenShot : 
+    • cd work
 Description: This command changes the current directory to the work directory. The cd command stands for "change directory." By executing this command, you are navigating into the work folder, which is presumably where your Git repository is located.
     • git remote add shared ../work.git
 Description: This command adds a new remote repository to your Git configuration. Here’s a breakdown of the command:
     • git remote add: This is the Git command used to add a new remote repository. A remote repository is a version of your project that is hosted on the internet or another network.
     • shared: This is the name you are giving to the remote repository. You can choose any name, but it’s common to use descriptive names that indicate the purpose or type of the remote.
     • ../work.git: This specifies the location of the remote repository you are adding. The .. refers to the parent directory of the current directory (i.e., the directory one level up). So, ../work.git indicates that the shared remote repository is located in the parent directory and is named work.git.
-40. ScreenShot
-View README File:
+
+40. ScreenShot :
+    1.View README File:
         ◦ Command: cat README.md
         ◦ Explanation: This command displays the contents of the README.md file, which includes a description of the project.
-    2. Switch to Main Branch:
+    2.Switch to Main Branch:
         ◦ Command: git switch main
         ◦ Explanation: This command switches to the main branch. The output indicates that you are already on the main branch.
-    3. Stage Changes:
+    3.Stage Changes:
         ◦ Command: git add README.md
         ◦ Explanation: This command stages the README.md file for the next commit.
-    4. Commit Changes:
+    4.Commit Changes:
         ◦ Command: git commit -m "Added shared comment to readme"
         ◦ Explanation: This command commits the staged changes with a message. The output shows that one file was changed, with one insertion and one deletion.
-    5. Push Changes to Remote:
+    5.Push Changes to Remote:
         ◦ Command: git push shared main
         ◦ Explanation: This command pushes the changes from the local main branch to the remote repository named shared. The output confirms that the push was successful, showing the objects being counted and written.
 Summary
 This session demonstrates viewing the README.md file, switching to the main branch, staging and committing changes, and pushing those changes to a remote repository. It highlights the process of updating documentation and sharing changes in a Git environment.
 
-41. ScreenShot
-Change Directory:
+41. ScreenShot :
+    1.Change Directory:
         ◦ Command: cd ..
         ◦ Explanation: This command moves up one directory level to the parent directory.
-    2. Pull Changes from Remote:
+    2.Pull Changes from Remote:
         ◦ Command: git pull shared main
         ◦ Explanation: This command pulls changes from the main branch of the remote repository named shared. The output indicates:
             ▪ Objects are being enumerated, counted, and compressed.
             ▪ A fast-forward merge occurred, updating the local branch to include the latest changes.
-    3. View README.md File:
+    3.View README.md File:
         ◦ Command: cat README.md
         ◦ Explanation: This command displays the contents of the README.md file, which includes a description of the project. The output shows that the file was modified, with one insertion and one deletion.
 Summary
 This session demonstrates changing directories, pulling updates from a remote repository, and viewing the contents of the README.md file. It highlights the process of synchronizing local changes with a remote repository in Git.
 
-
-42. ScreenShot
-Clone a Repository:
+42. ScreenShot :
+    1.Clone a Repository:
         ◦ Command: git clone git://localhost/work.git network_work
         ◦ Explanation: This command clones a repository from a local Git server into a new directory named network_work. The output indicates:
             ▪ Objects are being counted and received, confirming the cloning process was successful.
-    2. Change Directory:
+    2.Change Directory:
         ◦ Command: cd network_work
         ◦ Explanation: This command navigates into the newly created network_work directory.
-    3. List Directory Contents:
+    3.List Directory Contents:
         ◦ Command: ls
         ◦ Explanation: This command lists the contents of the network_work directory, showing files like LICENSE, README.md, and various HTML files.
-    4. Start Git Daemon:
+    4.Start Git Daemon:
         ◦ Command: git daemon --verbose --export-all --base-path=.
         ◦ Explanation: This command starts a Git daemon to serve repositories over the network. The output shows:
             ▪ Connection attempts and errors related to socket input/output.
@@ -717,7 +710,6 @@ Clone a Repository:
 Summary
 This session demonstrates cloning a local Git repository, navigating into the cloned directory, listing its contents, and attempting to start a Git daemon for network access. It highlights the process of setting up and accessing Git repositories in a local environment.
 
- --> METİN YAVUZ : IPZ 4.01 / UKRAİN
- Thank you for 
-Alexander Shvets
-alex@githowto.com 
+
+PROJECT IS OVER BY --> METİN YAVUZ : IPZ 4.01 / UKRAİN.
+---> Thank you for Alexander Shvets : alex@githowto.com OWNER githowto
